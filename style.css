@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'MyFont', sans-serif;
+}
+
+html, body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: normal;
+        flex-direction: column;
+        align-content: center;
+      }
+
+@font-face {
+        font-family: 'MyFont'; /* Название твоего шрифта */
+        src: url('MyFont.woff2') format('woff2'), /* Путь до твоего файла .woff2 */
+             url('MyFont.woff') format('woff'); /* Путь до твоего файла .woff */
+        font-weight: normal; /* Насыщенность шрифта */
+        font-style: normal; /* Стиль шрифта */
+      }
+
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: normal;
+        flex-direction: column;
+        align-content: center;
+        height: 774px;
+        width: 1024px;
+        background: #004980;
+        background-position: center;
+        background-size: cover;
+}
+
+.menu-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-content: center;
+        width: 480px;
+        height: 459px;
+        top: 158px;
+        left: 272px;
+        border-radius: 12px;
+        background: #C2F5FF;
+        background-position: center;
+        background-size: cover;
+}
+
+.menu-text {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 48px;
+        letter-spacing: 0em;
+        width: 208px;
+        text-align: center;
+        color: #004980;
+}
+
+.numbers-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: normal;
+        flex-direction: row;
+        align-content: center;
+}
+
+.numbers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: normal;
+        flex-direction: column;
+        align-content: center;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 72px;
+        letter-spacing: 0px;
+        text-align: center;
+        width: 98px;
+        height: 98px;
+        color: #0080C1;
+        border-radius: 12px;
+        background: #FFFFFF;
+        margin-top: 48px;
+        margin-bottom: 67px;
+        margin-right: 13px;
+        margin-left: 13px;
+}
+
+.play-game {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: normal;
+        flex-direction: column;
+        align-content: center;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #FFFFFF;
+        width: 246px;
+        height: 50px;
+        border-radius: 12px;
+        background: #7AC100;
+}
+
+
+/*# sourceMappingURL=style.css.map */
