@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'MyFont', sans-serif;
+  font-family: 'StratosSkyeng', sans-serif;
 }
 
 html, body {
@@ -17,11 +17,10 @@ html, body {
       }
 
 @font-face {
-        font-family: 'MyFont'; /* Название твоего шрифта */
-        src: url('MyFont.woff2') format('woff2'), /* Путь до твоего файла .woff2 */
-             url('MyFont.woff') format('woff'); /* Путь до твоего файла .woff */
-        font-weight: normal; /* Насыщенность шрифта */
-        font-style: normal; /* Стиль шрифта */
+        font-family: 'StratosSkyeng'; 
+        src: url('stratosskyengweb-regular.woff') format('woff2'),url('stratosskyengweb-regular.woff2') format('woff'); 
+        font-weight: normal;
+        font-style: normal; 
       }
 
 
@@ -41,8 +40,8 @@ a {
         align-items: normal;
         flex-direction: column;
         align-content: center;
-        height: 774px;
-        width: 1024px;
+        min-width: 100%;
+        height: 774vh;
         background: #004980;
         background-position: center;
         background-size: cover;
@@ -71,41 +70,42 @@ a {
         line-height: 48px;
         letter-spacing: 0em;
         width: 208px;
+        margin-bottom: 48px;
         text-align: center;
         color: #004980;
 }
 
-.numbers-box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: normal;
-        flex-direction: row;
-        align-content: center;
-}
+.number-toolbar input[type="number"] {
+        display: none;
 
-.numbers {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: normal;
-        flex-direction: column;
-        align-content: center;
+    }
+    
+.number-toolbar label {
+        cursor: pointer;
+
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 13px;
+
         font-size: 64px;
         font-weight: 400;
         line-height: 72px;
-        letter-spacing: 0px;
-        text-align: center;
-        width: 98px;
-        height: 98px;
+
         color: #0080C1;
         border-radius: 12px;
         background: #FFFFFF;
-        margin-top: 48px;
-        margin-bottom: 67px;
-        margin-right: 13px;
-        margin-left: 13px;
-}
+
+    }
+    
+    .number-toolbar input[type="number"]:checked+label {
+        background-color: #d0ffb7;
+    }
+    
+    .number-toolbar label:hover {
+        background-color: #d0ffb7;
+    }
 
 .play-game {
         display: flex;
@@ -114,6 +114,7 @@ a {
         align-items: normal;
         flex-direction: column;
         align-content: center;
+        margin-top: 67px;
         font-size: 24px;
         font-weight: 400;
         line-height: 32px;
@@ -124,6 +125,8 @@ a {
         height: 50px;
         border-radius: 12px;
         background: #7AC100;
+
+        cursor: pointer;
 }
 
 
