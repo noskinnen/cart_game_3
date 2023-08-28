@@ -1,6 +1,15 @@
 {
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -p 3001"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "eslint": "^8.47.0",
-    "prettier": "^3.0.2"
+    "http-server": "^14.1.0"
   }
 }
