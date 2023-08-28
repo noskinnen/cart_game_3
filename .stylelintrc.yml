@@ -1,0 +1,12 @@
+extends:
+    [
+        'stylelint-config-standard',
+        'stylelint-config-prettier',
+        'stylelint-prettier/recommended',
+    ]
+
+    "scripts": {
+  "lint:css": "stylelint './src/**.css'"
+  "prepare": "husky install"
+  "lint": "npm run lint:js && npm run lint:css"
+},

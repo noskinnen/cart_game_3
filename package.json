@@ -1,15 +1,15 @@
 {
-  "name": "project-name",
+  "name": "tools-packages",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -p 3001"
+    "format": "prettier —write ."
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "http-server": "^14.1.0"
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "install": "^0.13.0",
+    "npm": "^8.5.1",
+    "prettier": "^2.5.1"
   }
 }
