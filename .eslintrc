@@ -20,7 +20,11 @@
           "error",
           "always"
         ]
-      }
+      },
+
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true
+        }
     }
 
     
