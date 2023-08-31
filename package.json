@@ -4,7 +4,10 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier —write ."
+    "format": "prettier —write .",
+    "lint:css": "stylelint './src/**.css'",
+    "prepare": "husky install",
+    "lint": "npm run lint:js && npm run lint:css"
   },
   "devDependencies": {
     "husky": "^8.0.3",
@@ -12,4 +15,5 @@
     "npm": "^8.5.1",
     "prettier": "^2.5.1"
   }
+  
 }
