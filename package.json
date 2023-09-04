@@ -2,18 +2,22 @@
   "name": "tools-packages",
   "version": "1.0.0",
   "description": "",
+  "main": "./js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier —write .",
-    "lint:css": "stylelint './src/**.css'",
+    "format": "prettier -write .",
+    "lint:css": "stylelint './style.css'",
     "prepare": "husky install",
     "lint": "npm run lint:js && npm run lint:css"
   },
   "devDependencies": {
-    "husky": "^8.0.3",
-    "install": "^0.13.0",
-    "npm": "^8.5.1",
-    "prettier": "^2.5.1"
+    "axios": "^1.5.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-prettier": "^4.0.2"
   }
-  
 }
