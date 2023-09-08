@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "StratosSkyeng", sans-serif;
+}
+
+html,
+body {
+  background: #004980;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: normal;
+  flex-direction: column;
+  align-content: center;
+}
+
+@font-face {
+  font-family: "StratosSkyeng";
+  src: url("./fonts/stratosskyengweb-regular.woff") format("woff2"),
+    url("./fonts/stratosskyengweb-regular.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: normal;
+  flex-direction: column;
+  align-content: center;
+  background-size: cover;
+}
+
+.menu-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  width: 480px;
+  height: 459px;
+  top: 158px;
+  left: 272px;
+  border-radius: 12px;
+  background: #c2f5ff;
+  background-position: center;
+  background-size: cover;
+}
+
+.menu-text {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0em;
+  width: 208px;
+  margin-bottom: 48px;
+  text-align: center;
+  color: #004980;
+}
+
+.number-toolbar input[type="radio"] {
+  display: none;
+}
+
+.difficult-Item-Select {
+  background-color: #d0ffb7;
+}
+
+.number-toolbar label {
+  cursor: pointer;
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 13px;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 72px;
+  color: #0080c1;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.number-toolbar input[type="radio"]:checked + label {
+  background-color: #d0ffb7;
+}
+
+.number-toolbar label:hover {
+  background-color: #d0ffb7;
+}
+
+.play-game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: normal;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 67px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  width: 246px;
+  height: 50px;
+  border-radius: 12px;
+  background: #7ac100;
+  cursor: pointer;
+}
+
+.difficult-text {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  color: #004980;
+}
+
+
+// second next page view ( start game )
+
+.header {
+  display: flex;
+  margin-top: 22px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.timer {
+  background-image: url(./cards/таймер.png);
+  background-size: cover;
+  background-position: center;
+  width: 155px;
+  height: 91px;
+}
+
+.start-game-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: normal;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 67px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  width: 246px;
+  height: 50px;
+  border-radius: 12px;
+  background: #7ac100;
+  cursor: pointer;
+}
+
+.game-field {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  gap: 15px;
+}
+
+// cards : 
+
+.card-item {
+  background-image: url(./cards/рубашка.png);
+  background-size: cover;
+  background-position: center;
+  height: 133px;
+  width: 95px;
+} 
+
+.card-item1 {
+background-image: url(./cards/туз\ пики.png);
+}
+.card-item2 {
+  background-image: url(./cards/король\ пики.png);
+}
+.card-item3 {
+background-image: url(./cards/дама\ пики.png);
+}
+.card-item4 {
+background-image: url(./cards/валет\ пики.png);
+}
+.card-item5 {
+background-image: url(./cards/10\ пики.png);
+}
+.card-item6 {
+background-image: url(./cards/9\ пики.png);
+}
+.card-item7 {
+background-image: url(./cards/8\ пики.png);
+}
+.card-item8 {
+background-image: url(./cards/7\ пики.png);
+}
+.card-item9 {
+background-image: url(./cards/6\ пики.png);
+}
+
+.card-item10 {
+background-image: url(./cards/туз\ черви.png);
+}
+.card-item11 {
+background-image: url(./cards/король\ черви.png);
+}
+.card-item12 {
+background-image: url(./cards/дама\ черви.png);
+}
+.card-item13 {
+background-image: url(./cards/валет\ черви.png);
+}
+.card-item14 {
+background-image: url(./cards/10\ черви.png);
+}
+.card-item15 {
+background-image: url(./cards/9\ черви.png);
+}
+.card-item16 {
+background-image: url(./cards/8\ черви.png);
+}
+.card-item17 {
+background-image: url(./cards/7\ черви.png);
+}
+.card-item18 {
+background-image: url(./cards/6\ черви.png);
+}
+
+.card-item19 {
+background-image: url(./cards/туз\ бубны.png);
+}
+.card-item20 {
+background-image: url(./cards/король\ бубны.png);
+}
+.card-item21 {
+background-image: url(./cards/дама\ бубны.png);
+}
+.card-item22 {
+background-image: url(./cards/валет\ бубны.png);
+}
+.card-item23 {
+background-image: url(./cards/10\ бубны.png);
+}
+.card-item24 {
+background-image: url(./cards/9\ бубны.png);
+}
+.card-item25 {
+background-image: url(./cards/8\ бубны.png);
+}
+.card-item26 {
+background-image: url(./cards/7\ бубны.png);
+}
+.card-item27 {
+background-image: url(./cards/6\ бубны.png);
+}
+
+.card-item28 {
+background-image: url(./cards/туз\ крести.png);
+}
+.card-item29 {
+background-image: url(./cards/король\ крести.png);
+}
+.card-item30 {
+background-image: url(./cards/дама\ крести.png);
+}
+.card-item31 {
+background-image: url(./cards/валет\ крести.png);
+}
+.card-item32 {
+background-image: url(./cards/10\ крести.png);
+}
+.card-item33 {
+background-image: url(./cards/9\ крести.png);
+}
+.card-item34 {
+background-image: url(./cards/8\ крести.png);
+}
+.card-item35 {
+background-image: url(./cards/7\ крести.png);
+}
+.card-item36 {
+background-image: url(./cards/6\ крести.png);
+}
+
+
+.checkedCard {
+  border: 3px solid green;
+  cursor: default;
+}
+
+.flip {
+  transform: perspective(100px) rotateY(180deg);
+}
