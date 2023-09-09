@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "StratosSkyeng", sans-serif;
 }
 
 html,
@@ -17,17 +16,18 @@ body {
   align-items: normal;
   flex-direction: column;
   align-content: center;
+  font-family: StratosSkyeng, sans-serif;
 }
 
 @font-face {
-  font-family: "StratosSkyeng";
-  src: url("./fonts/stratosskyengweb-regular.woff") format("woff2"), url("./fonts/stratosskyengweb-regular.woff2") format("woff");
-  font-weight: normal;
+  font-family: StratosSkyeng;
+  src: url("./static/fonts/stratosskyengweb-regular.woff") format("woff2"), url("./static/fonts/stratosskyengweb-regular.woff2") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 .center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+  padding-left: calc(50% - 480px);
+  padding-right: calc(50% - 480px);
 }
 
 a {
