@@ -14,6 +14,7 @@
     "start_prod": "webpack-dev-server --open --mode production"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.198",
     "axios": "^1.5.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
@@ -28,8 +29,13 @@
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-prettier": "^4.0.2",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "timer-node": "^5.0.7"
   }
 }
