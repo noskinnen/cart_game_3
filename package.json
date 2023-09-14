@@ -2,7 +2,7 @@
   "name": "tools-packages",
   "version": "1.0.0",
   "description": "",
-  "main": "./js/index.js",
+  "main": "./js/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier -write .",
@@ -11,7 +11,8 @@
     "lint": "npm run lint:js && npm run lint:css",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development",
-    "start_prod": "webpack-dev-server --open --mode production"
+    "start_prod": "webpack-dev-server --open --mode production",
+    "lint:ts": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.198",
@@ -38,4 +39,4 @@
   "dependencies": {
     "timer-node": "^5.0.7"
   }
-}
+} 
