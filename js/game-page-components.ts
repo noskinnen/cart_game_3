@@ -1,6 +1,6 @@
-import { renderMainPage } from './index.ts';
-import { createCardArray } from './helper-component.ts';
-import { renderEndMessage } from './end-game-component.ts';
+import { renderMainPage } from './index';
+import { createCardArray } from './helper-component';
+import { renderEndMessage } from './end-game-component';
 import { Timer } from 'timer-node';
 
 export function renderGamePage(difficult) {

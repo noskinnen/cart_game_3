@@ -1,6 +1,11 @@
-import { renderMainPage } from './index.ts';
+import { Timer } from 'timer-node';
+import { renderMainPage } from './index';
 
-export const renderEndMessage = (status, appEl, timer) => {
+export const renderEndMessage = (
+    status: boolean,
+    appEl: HTMLElement,
+    timer: Timer,
+) => {
     const endGameBoxHtml = `
                                     <div class="end-game-box">
                 <div class=${
@@ -24,4 +29,4 @@ export const renderEndMessage = (status, appEl, timer) => {
         .addEventListener('click', () => {
             renderMainPage();
         });
-} 
+};

@@ -1,4 +1,4 @@
-import { renderGamePage } from "./game-page-components.ts";
+import { renderGamePage } from "./game-page-components";
 
 window.globalState = {
 diffLevel: '',
