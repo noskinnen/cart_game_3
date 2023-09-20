@@ -1,8 +1,6 @@
-import { renderGamePage } from "./game-page-components";
+import { renderGamePage } from './game-page-components';
 
-window.globalState = {
-diffLevel: '',
-} 
+let diffLevel: string = '';
 
 export const renderMainPage = () => {
     const appEl = document.getElementById('app');
@@ -38,24 +36,26 @@ export const renderMainPage = () => {
             </div>
             <button class="play-game">Старт</button>
         </div>`;
-        appEl.innerHTML = appHtml;
+    appEl.innerHTML = appHtml;
 
-        const levelSelectEls=document.querySelectorAll('.difficult-item');
-        for (const levelSelectEl of levelSelectEls) {
-            levelSelectEl.addEventListener('click', () => {
-                for (const levelSelectEl of levelSelectEls) {
-                    levelSelectEl.classList.remove('difficult-Item-Select');
-                }
-                levelSelectEl.classList.add('difficult-Item-Select');
-                globalState.diffLevel = levelSelectEl.dataset.index
-            } )
+    const levelSelectEls: NodeListOf <HTMLElement> =
+        document.querySelectorAll('.difficult-item');
+    for (const levelSelectEl of levelSelectEls) {
+        levelSelectEl.addEventListener('click', () => {
+            for (const levelSelectEl of levelSelectEls) {
+                levelSelectEl.classList.remove('difficult-Item-Select');
+            }
+            levelSelectEl.classList.add('difficult-Item-Select');
+            diffLevel = levelSelectEl.dataset.index;
+        });
+    }
+
+    const buttonStartGame = document.querySelector('.play-game');
+    buttonStartGame.addEventListener('click', () => {
+        if (diffLevel) {
+            renderGamePage(diffLevel);
         }
-        
-        const buttonStartGame = document.querySelector('.play-game');
-        buttonStartGame.addEventListener('click', () => {
-            renderGamePage(globalState.diffLevel)
-        })
-        
-}
+    });
+};
 
 renderMainPage();

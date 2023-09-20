@@ -3,10 +3,10 @@ import { createCardArray } from './helper-component';
 import { renderEndMessage } from './end-game-component';
 import { Timer } from 'timer-node';
 
-export function renderGamePage(difficult) {
+export function renderGamePage(difficult: string) {
     const appEl = document.getElementById('app');
-    let firstCard = null;
-    let secoundCard = null;
+    let firstCard: number = null;
+    let secoundCard: number = null;
     let clickabled = true;
     let cardArray = createCardArray(difficult);
 
@@ -45,10 +45,10 @@ export function renderGamePage(difficult) {
 
     let intervalId = setInterval(() => {
         minutesHtml.innerHTML = timer.format(
-            `${timer.format('%m') < 10 ? '0%m' : '%m'}`,
+            `${Number(timer.format('%m')) < 10 ? '0%m' : '%m'}`,
         );
         secondsHtml.innerHTML = timer.format(
-            `${timer.format('%s') < 10 ? '.0%s' : '.%s'}`,
+            `${Number(timer.format('%s')) < 10 ? '.0%s' : '.%s'}`,
         );
     }, 1000);
 
@@ -62,14 +62,17 @@ export function renderGamePage(difficult) {
         document.querySelector('.game-field').innerHTML = closedCardHtml;
 
         const cardElements = document.querySelectorAll('.card-item');
+
         for (const cardElement of cardElements) {
             cardElement.addEventListener('click', () => {
                 if (
                     clickabled &&
                     !cardElement.classList.contains('checkedCard')
                 ) {
-                    const index = cardElement.dataset.index;
-                    cardElement.classList.add(`${cardArray[index]}`);
+                    const index: number = Number(
+                        (cardElement as HTMLElement).dataset.index,
+                    );
+                    
                     if (firstCard == null) {
                         firstCard = index;
                     } else {
@@ -78,7 +81,7 @@ export function renderGamePage(difficult) {
                             clickabled = false;
                         }
                     }
-                    if (firstCard != null && secoundCard != null) {
+                    if (firstCard !== null && secoundCard !== null) {
                         if (cardArray[firstCard] === cardArray[secoundCard]) {
                             setTimeout(() => {
                                 for (const palayedCard of document.querySelectorAll(
@@ -117,4 +120,4 @@ export function renderGamePage(difficult) {
             clearTimeout(timerId);
             renderMainPage();
         });
-} 
+}

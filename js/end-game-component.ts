@@ -7,7 +7,7 @@ export const renderEndMessage = (
     timer: Timer,
 ) => {
     const endGameBoxHtml = `
-                                    <div class="end-game-box">
+                <div class="end-game-box">
                 <div class=${
                     status ? 'win-smile-img' : 'loose-smile-img'
                 }></div>
@@ -16,13 +16,14 @@ export const renderEndMessage = (
                 }</h1>
                 <h2 class="end-time-text">Затраченное время:</h2>
                 <div class="game-time">${timer.format(
-                    timer.format('%m') < 10 ? '0%m' : '%m',
+                    `${Number(timer.format('%m')) < 10 ? '0%m' : '%m'}`,
                 )}${timer.format(
-                    timer.format('%s') < 10 ? '.0%s' : '.%s',
+                    `${Number(timer.format('%s')) < 10 ? '.0%s' : '.%s'}`,
                 )}</div>
                 <button class="reset-game-button reset-game-button__bottom">Играть снова</button>
-                                    </div>`;
+                </div>`;
     appEl.innerHTML = appEl.innerHTML + endGameBoxHtml;
+    document.body.classList.add('game-over-bg');
     document.getElementById('game').classList.add('game__transparent');
     document
         .querySelector('.reset-game-button__bottom')

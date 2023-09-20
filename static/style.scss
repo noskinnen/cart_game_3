@@ -196,7 +196,7 @@ a {
   gap: 15px;
 }
 
-// cards : 
+
 
 .card-item {
   background-image: url(./cards/рубашка.png);
@@ -204,6 +204,7 @@ a {
   background-position: center;
   height: 133px;
   width: 95px;
+  cursor: pointer;
 } 
 
 .card-item1 {
@@ -321,7 +322,6 @@ background-image: url(./cards/6\ крести.png);
 
 .checkedCard {
   border: 3px solid green;
-  cursor: default;
 }
 
 .flip {
@@ -350,6 +350,11 @@ background-image: url(./cards/6\ крести.png);
 .checked-card {
   pointer-events: none;
   opacity: 0.8;
+}
+
+.game-over-bg{
+  opacity: 90%;
+  background: #004980;
 }
 
 .end-game-box {
