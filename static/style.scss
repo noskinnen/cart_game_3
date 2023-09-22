@@ -196,7 +196,7 @@ a {
   gap: 15px;
 }
 
-
+// cards : 
 
 .card-item {
   background-image: url(./cards/рубашка.png);
@@ -322,6 +322,7 @@ background-image: url(./cards/6\ крести.png);
 
 .checkedCard {
   border: 3px solid green;
+  cursor: default;
 }
 
 .flip {
@@ -350,11 +351,7 @@ background-image: url(./cards/6\ крести.png);
 .checked-card {
   pointer-events: none;
   opacity: 0.8;
-}
-
-.game-over-bg{
-  opacity: 90%;
-  background: #004980;
+  cursor: pointer;
 }
 
 .end-game-box {
@@ -422,4 +419,22 @@ background-image: url(./cards/6\ крести.png);
   margin-bottom: 40px;
   color: #000;
   text-align: center;
+}
+
+.flip {
+  transform: perspective(100px) rotateY(180deg) !important;
+  transition: transform 200ms linear;
+}
+
+.game-over-background {
+  background: linear-gradient(to bottom, rgba(0, 73, 128, .9), rgba(0, 73, 128, .9)), url('/static/cards/bg.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: content-box;
+  box-shadow: none;
+  overflow: hidden;
+  background-origin: content-box;
+  width: 1024px;
+  margin: auto;
 }
