@@ -58,7 +58,7 @@ export function renderGamePage(difficult: string) {
         })
         .join('');
 
-    let timerId = setTimeout(() => {
+        const timerId = setTimeout(() => {
         document.querySelector('.game-field').innerHTML = closedCardHtml;
 
         const cardElements = document.querySelectorAll('.card-item');
@@ -72,6 +72,12 @@ export function renderGamePage(difficult: string) {
                     const index: number = Number(
                         (cardElement as HTMLElement).dataset.index,
                     );
+
+                    cardElement.classList.add(`flip`);
+                    setTimeout(() => {
+                        cardElement.classList.add(`${cardArray[index]}`); //открываем карту
+                        cardElement.classList.remove(`flip`);
+                    }, 200);
                     
                     if (firstCard == null) {
                         firstCard = index;
@@ -82,8 +88,11 @@ export function renderGamePage(difficult: string) {
                         }
                     }
                     if (firstCard !== null && secoundCard !== null) {
-                        if (cardArray[firstCard] === cardArray[secoundCard]) {
+                        console.log(firstCard, secoundCard );
+                        if (cardArray[firstCard] == cardArray[secoundCard]) {
+                            
                             setTimeout(() => {
+                                
                                 for (const palayedCard of document.querySelectorAll(
                                     `.${cardArray[firstCard]}`,
                                 )) {

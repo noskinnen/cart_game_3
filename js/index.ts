@@ -37,8 +37,8 @@ export const renderMainPage = () => {
             <button class="play-game">Старт</button>
         </div>`;
     appEl.innerHTML = appHtml;
-
-    const levelSelectEls: NodeListOf <HTMLElement> =
+    document.body.classList.remove('game-over-background')
+    const levelSelectEls: NodeListOf<HTMLElement> =
         document.querySelectorAll('.difficult-item');
     for (const levelSelectEl of levelSelectEls) {
         levelSelectEl.addEventListener('click', () => {

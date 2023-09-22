@@ -22,12 +22,18 @@ export const renderEndMessage = (
                 )}</div>
                 <button class="reset-game-button reset-game-button__bottom">Играть снова</button>
                 </div>`;
-    appEl.innerHTML = appEl.innerHTML + endGameBoxHtml;
-    document.body.classList.add('game-over-bg');
-    document.getElementById('game').classList.add('game__transparent');
+
+                
+             appEl.innerHTML = appEl.innerHTML + endGameBoxHtml;
+    
+    
+   
+    document.getElementById('game').style.display = 'none';
+    document.body.classList.add('game-over-background')
     document
         .querySelector('.reset-game-button__bottom')
         .addEventListener('click', () => {
             renderMainPage();
-        });
+        }
+        );
 };
