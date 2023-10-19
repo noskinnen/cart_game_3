@@ -76,7 +76,7 @@ export function renderGamePage(difficult: string) {
                     cardElement.classList.add(`flip`);
                     setTimeout(() => {
                         cardElement.classList.add(`${cardArray[index]}`); //открываем карту
-                        cardElement.classList.remove(`flip`);
+                        cardElement.classList.remove(`flip`); //убрал фон
                     }, 200);
                     
                     if (firstCard == null) {
